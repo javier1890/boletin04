@@ -1,29 +1,31 @@
-package boletin04;
+package boletin05;
 
-import java.util.Scanner;
+import java.util.Arrays;
+
 
 public class Ejercicio01 {
 
 	public static void main(String[] args) {
-		// leer 5 numeros y mostrarlos en el mismo orden introducido
 		
-		int a[]=new int[5];
-		Scanner leer = new Scanner(System.in);
+		//1. Crear una tabla bidimensional de tamaño 5x5 y rellenarla de la siguiente forma: la posición T[n,m]
+		//debe contener n+m. Después se debe mostrar su contenido.
 		
-		for (int j = 0; j < 5; j++) {
-			System.out.println((j+1)+"Ingrese el valor: ");
-			a[j] =leer.nextInt();
-		}
+		int[][] t=new int[5][5];
 		
-		
-		for (int j = 0; j < 5; j++) {
-			System.out.println((j+1)+") "+a[j]);
-			
+		for (int i = 0; i < t.length; i++) {
+			for (int j = 0; j < t.length; j++) {
+				t[i][j]=i+j;
+			}
 		}
 		
 		
 		
- 
+		//toString() Escape para arreglos unidimencionales
+		//deepToString() Escape para arreglos bidimencionales
+		System.out.println(Arrays.deepToString(t));
+		
+
+
 	}
 
 }
